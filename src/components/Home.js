@@ -20,7 +20,7 @@ const Home = (props) => {
         <TableCell>
           <DeleteIcon
             onClick={() => props.removeBusiness(id)}
-            style={{ color: "red" }}
+            style={{ color: "Orange" }}
           />
         </TableCell>
       );

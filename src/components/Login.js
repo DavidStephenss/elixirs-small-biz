@@ -50,7 +50,7 @@ class App extends Component {
               type="submit"
               className="login-button"
               variant="contained"
-              color="gray"
+              color="grey"
             >
               Login
             </Button>
