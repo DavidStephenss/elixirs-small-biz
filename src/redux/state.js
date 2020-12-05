@@ -1,7 +1,7 @@
 export default {
   user: "username",
   loggedIn: false,
-  cocktails: [
+  businesses: [
     {
       id: 1,
       name: "Old Fashioned",
@@ -36,130 +36,6 @@ export default {
       description:
       "The paloma is a tequila-based cocktail. This drink is most commonly prepared by mixing tequila, lime juice, and a grapefruit-flavored soda such as Fresca, Squirt, or Jarritos and served on the rocks with a lime wedge. Adding salt to the rim of the glass is also an option",
       ingredients: "2 ounces tequila, 1/2 ounce lime juice, freshly squeezed, Grapefruit soda, to top, Garnish: lime wheel, Garnish: salt rim (optional)"
-    },
-    // {
-    //   id: 6,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 7,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 8,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 9,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 10,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 11,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 12,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 13,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 14,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 15,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 16,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 17,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 18,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 19,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 20,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 21,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 22,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
-    // {
-    //   id: 23,
-    //   name: "",
-    //   description:
-    //   "",
-    //   ingredients: ""
-    // },
+    } 
+  ]
+}
