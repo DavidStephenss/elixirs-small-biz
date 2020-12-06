@@ -41,13 +41,7 @@ const AddBusiness = (props) => {
         />
         <TextField
           onChange={handleTextChange}
-          placeholder={"Address"}
-          fullWidth={true}
-          id="address"
-        />
-        <TextField
-          onChange={handleTextChange}
-          placeholder={"Hours"}
+          placeholder={"ingredients"}
           fullWidth={true}
           id="hours"
         />

@@ -4,53 +4,38 @@ export default {
   businesses: [
     {
       id: 1,
-      name: "Better Price Tree Service",
+      name: "Old Fashioned",
       description:
-        "The trimming, pruning and removal of trees is a specialized job that should only be done by a company with experience and the appropriate equipment. Better Price Tree Service has the experience and the equipment to provide these tree services in a safe way.",
-      address: "600 Busleigh Castle Way, Pflugerville, TX 78660",
-      hours: "8:00 AM - 6:00 PM",
-      lat: 30.1051337,
-      lng: -97.8742819,
+        "The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey or, less commonly, brandy, and garnishing with orange slice or zest and a cocktail cherry. It is traditionally served in an old fashioned glass (also known as rocks glass)",
+      ingredients: "two ounces of whiskey, 1/2 ounce of simple or 1/4 ounce, 3 to 5 dashes of bitters, garnish with orange swath and cherry."
     },
     {
       id: 2,
-      name: "Pokeworks",
+      name: "Manhattan",
       description:
-        "We are committed to bringing you delicious, Hawaiian poke using the highest quality sourced ingredients. We are the only poke restaurant specialized in poke burrito.",
-      address: "1920 E Riverside Dr., Austin, TX 78741",
-      hours: "11:00 AM - 9:00 PM",
-      lat: 30.242302,
-      lng: -97.7304627,
+      "A Manhattan is a cocktail made with whiskey, sweet vermouth, and bitters. While rye is the traditional whiskey of choice, other commonly used whiskies include Canadian whisky, bourbon, blended whiskey, and Tennessee whiskey.",
+      ingredients: "2 oz Rye or Canadian whisky, 3/4 oz Sweet red vermouth, Dash Angostura bitters, Maraschino cherry (Garnish)"
     },
     {
       id: 3,
-      name: "Bella Salon",
+      name: "Whiskey Sour",
       description:
-        "Bella Salon is a happy and welcoming place! Our talented team delivers on-trend hair cuts, hair color and styling; including updos and makeup! And we have an amazing spa and nail salon to satisfy all your skin care and beauty needs!",
-      address: "1221 W 6th St., Austin, TX 78703",
-      hours: "8:00 AM - 8:00 PM",
-      lat: 30.2733401,
-      lng: -97.7616609,
+      "The whiskey sour is a mixed drink containing whiskey, lemon juice, sugar, and optionally, a dash of egg white or vegan version with aquafaba or cocktails foamer. With the egg white, it is sometimes called a Boston Sour. ",
+      ingredients: "1 1/2 oz (3 parts) Bourbon whiskey, 1 dash egg white, 1 oz (2 parts) Fresh lemon juice, 1/2 oz (1 part) Gomme syrup"
     },
     {
       id: 4,
-      name: "Hatchet Alley",
+      name: "Margarita",
       description:
-        "Austin's own Axe throwing football bowling and bocce ball facility. 12,000 sqft of fun. Great for a company outing. Batchelor or Bachelorette party, or just a date night.",
-      address: "443 Bastrop Hwy., Austin, TX 78741",
-      hours: "11:00 AM - 11:00 PM",
-      lat: 30.2389317,
-      lng: -97.6884783,
+      "A margarita is a Mexican cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass. The drink is served shaken with ice, blended with ice, or without ice.",
+      ingredients: "1 1/2 tequila, 3/4 ounce orange liqueur, 1/2 ounce simple syrup, 1 ounce lime juice"
     },
     {
       id: 5,
-      name: "Women and Their Work",
+      name: "Paloma",
       description:
-        "Women & Their Work is a nonprofit arts organization located in Austin that serves as a catalyst for contemporary art created by women living and working in Texas and beyond. For 41 years, Women & Their Work has brought groundbreaking art to Austin, with exhibitions, performances, and educational programs.",
-      address: "1710 Lavaca St., Austin, TX 78701",
-      hours: "12:00 PM - 4:00 PM",
-      lat: 30.2798829,
-      lng: -97.7435831,
-    },
-  ],
-};
+      "The paloma is a tequila-based cocktail. This drink is most commonly prepared by mixing tequila, lime juice, and a grapefruit-flavored soda such as Fresca, Squirt, or Jarritos and served on the rocks with a lime wedge. Adding salt to the rim of the glass is also an option",
+      ingredients: "2 ounces tequila, 1/2 ounce lime juice, freshly squeezed, Grapefruit soda, to top, Garnish: lime wheel, Garnish: salt rim (optional)"
+    } 
+  ]
+}

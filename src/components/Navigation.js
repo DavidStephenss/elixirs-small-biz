@@ -14,11 +14,11 @@ export default function Navigation(props) {
       <AppBar position="relative">
         <Toolbar className="nav-bar">
           <Typography variant="h6" className="nav-title">
-            Austin Small Business
+             Elixirs!
           </Typography>
           <ul className="nav-list">
             <Button color="inherit" className="nav-list-item">
-              <Link to="/">Listing</Link>
+              <Link to="/">Cocktails</Link>
             </Button>
             <li>
               {document.cookie === "loggedIn=true" && (

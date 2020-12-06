@@ -20,7 +20,7 @@ const Home = (props) => {
         <TableCell>
           <DeleteIcon
             onClick={() => props.removeBusiness(id)}
-            style={{ color: "red" }}
+            style={{ color: "Orange" }}
           />
         </TableCell>
       );
@@ -33,21 +33,18 @@ const Home = (props) => {
         <TableHead>
           <TableRow>
             <TableCell className="table-cell">Name</TableCell>
+             <TableCell>ingredients</TableCell>
             <TableCell>Description</TableCell>
-            <TableCell>Hour</TableCell>
-            <TableCell>Address</TableCell>
-            <TableCell></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {props.businesses.map((business, id) => (
-            <TableRow key={business.address}>
+            <TableRow>
               <TableCell style={{ color: "mediumblue" }}>
                 <Link to={`/business/${business.id}`}>{business.name}</Link>
               </TableCell>
+              <TableCell>{business.ingredients}</TableCell>
               <TableCell>{business.description}</TableCell>
-              <TableCell>{business.hours}</TableCell>
-              <TableCell>{business.address}</TableCell>
               {deleteButton(id)}
             </TableRow>
           ))}
