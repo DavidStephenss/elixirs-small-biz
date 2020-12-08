@@ -1,60 +1,56 @@
-const mysql = require('mysql')
-const pool = require('../sql/connection')
-const { handleSQLError } = require('../sql/error')
+const mysql = require("mysql");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const pool = require("../sql/connection");
+const { handleSQLError } = require("../sql/error");
 
-const getAllUsers = (req, res) => {
-  pool.query("SELECT + FROM users", (err, rows) => {
-    if (err) return handleSQLError(res, err)
-    return res.json(rows)
-  })
-}
+// for bcrypt
+const saltRounds = 10;
 
-const getUserById = (req, res) => {
-  let sql = "SELECT + FROM users WHERE id = ?"
-  sql = mysql.format(sql, [ req.params.id ])
+const signup = (req, res) => {
+  const { userName, password } = req.body;
+  let sql = "INSERT INTO users (userName, password) VALUES (?, ?)";
 
-   pool.query(sql, (err, rows) => {
-    if (err) return handleSQLError(res, err)
-    return res.json(rows);
-   })
-}
+  bcrypt.hash(password, saltRounds, function (err, hash) {
+    sql = mysql.format(sql, [userName, hash]);
 
-const createUser = (req, res) => {
-  const { userName, password } = req.body
-  let sql = "INSERT INTO users (userName, password) VALUES (?, ?)"
-  sql = mysql.format(sql, [ userName, password ])
+    pool.query(sql, (err, result) => {
+      if (err) {
+        if (err.code === "ER_DUP_ENTRY")
+          return res.status(409).send("UserName is taken");
+        return handleSQLError(res, err);
+      }
+      return res.send("Sign-up successful");
+    });
+  });
+};
 
-  pool.query(sql, (err, results) => {
-    if (err) return handleSQLError(res, err)
-    return res.json({ newId: results.insertId });
-  })
-}
+const login = (req, res) => {
+  const { userName, password } = req.body;
+  let sql = "SELECT * FROM users WHERE userName = ?";
+  sql = mysql.format(sql, [userName]);
 
-const updateUserById = (req, res) => {
-  const { userName, password } = req.body
-  let sql = "UPDATE users SET userName = ?, password = ? WHERE id = ?"
-  sql = mysql.format(sql, [ userName, password, req.params.id ])
+  pool.query(sql, (err, rows) => {
+    if (err) return handleSQLError(res, err);
+    if (!rows.length) return res.status(404).send("No matching users");
 
-  pool.query(sql, (err, results) => {
-    if (err) return handleSQLError(res, err)
-    return res.status(204).json();
-  })
-}
+    const hash = rows[0].password;
+    bcrypt.compare(password, hash).then((result) => {
+      if (!result) return res.status(400).send("Invalid password");
 
-const deleteUserByUserName = (req, res) => {
-  let sql = "DELETE FROM users WHERE userName = ?"
-  sql = mysql.format(sql, [ req.params.userName ])
+      const data = { ...rows[0] };
+      data.password = "REDACTED";
 
-  pool.query(sql, (err, results) => {
-    if (err) return handleSQLError(res, err)
-    return res.json({ message: `Deleted ${results.affectedRows} user(s)` });
-  })
-}
+      const token = jwt.sign(data, "secret");
+      res.json({
+        msg: "Login successful",
+        token,
+      });
+    });
+  });
+};
 
 module.exports = {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUserById,
-  deleteUserByUserName
-}
+  signup,
+  login,
+};
