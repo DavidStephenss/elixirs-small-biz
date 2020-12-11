@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     if (this.state.redirectHome) {
-      return <Redirect to="/" />;
+      return <Redirect to="/home" />;
     }
     return (
       <div className="app">
@@ -62,9 +62,8 @@ class App extends Component {
             <Button
               type="submit"
               className="login-button"
-              variant="contained"
-            >
-              Login
+              variant="contained">
+                Login 
             </Button>
             <br/>
               <Link to="/sign-up" style={{color:"white"}}>
