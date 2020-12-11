@@ -28,14 +28,16 @@ class App extends Component {
     return (
       <div className="app">
         <Container maxWidth="sm">
-          <form className="login-form" onSubmit={this.login}>
+          <form className="login-form" style={{ color: "white "}} onSubmit={this.login}>
             <TextField
               required
+              style={{ color: "white "}}
               onChange={this.handleTextChange}
               value={this.state.username}
               name="username"
               label="Username"
               type="text"
+              variant="outlined"
             />
             <TextField
               required
@@ -44,17 +46,21 @@ class App extends Component {
               name="password"
               label="Password"
               type="password"
+              style={{ color: "white "}}
             />
             <Button
               type="submit"
               className="login-button"
               variant="contained"
-              color="grey"
             >
               Login
             </Button>
             <br/>
-            <Button color="grey" className="nav-list-item">
+            <Button
+              type="submit"
+              className="signUp-button"
+              variant="contained"
+            >
               <Link to="/sign-up">
                 Signup!
               </Link>
