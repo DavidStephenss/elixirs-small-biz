@@ -1,28 +1,34 @@
 import React, { Component } from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { TextField, Button, Container } from "@material-ui/core";
-class App extends Component {
-  state = {
-    username: "",
-    password: "",
-    redirectHome: false,
-  };
 
+
+class SignUp extends Component {
+  state = {
+    userName: "",
+    password: "",
+  };
   handleTextChange = (e) => {
     const state = { ...this.state };
     state[e.target.name] = e.target.value;
     this.setState(state);
   };
 
-  login = (e) => {
+  createAccount = (e) => {
+    console.log("is create account running?");
+    const userObject = {
+      userName: this.state.userName,
+      userPassword: this.state.password,
+    };
+    console.log(userObject + "this is the user object");
     e.preventDefault();
-    document.cookie = "loggedIn=true;max-age=60*1000";
-    this.props.setUser(this.state.username);
-    this.setState({ redirectHome: true });
+    this.props.setUser(userObject);
+    if (this.props.user.userName !== "") {
+    } else {
+    }
   };
-
-  render() {
-    if (this.state.redirectHome) {
+render() {
+  if (this.state.redirectHome) {
       return <Redirect to="/" />;
     }
     return (
@@ -51,19 +57,14 @@ class App extends Component {
               variant="contained"
               color="grey"
             >
-              Login
-            </Button>
-            <br/>
-            <Button color="grey" className="nav-list-item">
-              <Link to="/sign-up">
-                Signup!
-              </Link>
+              Sign Up!
             </Button>
           </form>
         </Container>
       </div>
     );
   }
-}
+}  
 
-export default App;
+export default SignUp;
+  
