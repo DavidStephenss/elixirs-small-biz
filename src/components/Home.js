@@ -40,7 +40,7 @@ const Home = (props) => {
         <TableBody>
           {props.businesses.map((business, id) => (
             <TableRow>
-              <TableCell style={{ color: "mediumblue" }}>
+              <TableCell style={{ color: "green" }}>
                 <Link to={`/business/${business.id}`}>{business.name}</Link>
               </TableCell>
               <TableCell>{business.ingredients}</TableCell>

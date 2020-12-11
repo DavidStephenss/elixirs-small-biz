@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { TextField, Button, Container } from "@material-ui/core";
-
 class App extends Component {
   state = {
     username: "",
@@ -27,7 +26,7 @@ class App extends Component {
       return <Redirect to="/" />;
     }
     return (
-      <div className="App">
+      <div className="app">
         <Container maxWidth="sm">
           <form className="login-form" onSubmit={this.login}>
             <TextField
