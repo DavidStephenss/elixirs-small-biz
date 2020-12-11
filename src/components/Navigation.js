@@ -18,7 +18,7 @@ export default function Navigation(props) {
           </Typography>
           <ul className="nav-list">
             <Button color="inherit" className="nav-list-item">
-              <Link to="/">Cocktails</Link>
+              <Link to="/home">Cocktails</Link>
             </Button>
             <li>
               {document.cookie === "loggedIn=true" && (
@@ -31,7 +31,7 @@ export default function Navigation(props) {
                     className="nav-list-item"
                     onClick={() => {
                       document.cookie = "loggedIn=";
-                      window.location.replace("/login");
+                      window.location.replace("/");
                     }}
                   >
                     Logout
@@ -46,7 +46,7 @@ export default function Navigation(props) {
                   className="nav-list-item"
                   onClick={() => {
                     document.cookie = "loggedIn=";
-                    window.location.replace("/login");
+                    window.location.replace("/");
                   }}
                 >
                   Login

@@ -9,9 +9,9 @@ import SignUp from "./container/SignUp";
 const Router = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Login} />
+      <Route exact path="/home" component={Home} />
       <Route exact path="/add" component={AddBusiness} />
-      <Route exact path="/login" component={Login} />
       <Route exact path="/business/:id" component={Business} />
       <Route path="/sign-up" component={SignUp} />
     </Switch>

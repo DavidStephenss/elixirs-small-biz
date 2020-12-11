@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import { TextField, Button, Container } from "@material-ui/core";
+import CssBaseline from "@material-ui/core/CssBaseline";
+
 class App extends Component {
   state = {
     username: "",
@@ -27,26 +29,35 @@ class App extends Component {
     }
     return (
       <div className="app">
+        <CssBaseline />
         <Container maxWidth="sm">
           <form className="login-form" style={{ color: "white "}} onSubmit={this.login}>
             <TextField
-              required
-              style={{ color: "white "}}
-              onChange={this.handleTextChange}
-              value={this.state.username}
-              name="username"
-              label="Username"
-              type="text"
-              variant="outlined"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            type="text"
+            id="userName"
+            label="Username"
+            name="userName"
+            // onChange={handleUsernameChange}
+            autoComplete="userName"
+            autoFocus
+            style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             />
             <TextField
-              required
-              onChange={this.handleTextChange}
-              value={this.state.password}
-              name="password"
-              label="Password"
-              type="password"
-              style={{ color: "white "}}
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            // onChange={handlePasswordChange}
+            autoComplete="current-password"
+            style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             />
             <Button
               type="submit"
@@ -56,15 +67,9 @@ class App extends Component {
               Login
             </Button>
             <br/>
-            <Button
-              type="submit"
-              className="signUp-button"
-              variant="contained"
-            >
-              <Link to="/sign-up">
-                Signup!
+              <Link to="/sign-up" style={{color:"white"}}>
+                Don't have an account? Signup!
               </Link>
-            </Button>
           </form>
         </Container>
       </div>

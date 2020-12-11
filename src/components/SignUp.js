@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { TextField, Button, Container } from "@material-ui/core";
 
 
@@ -36,29 +36,43 @@ render() {
         <Container maxWidth="sm">
           <form className="login-form" onSubmit={this.login}>
             <TextField
-              required
-              onChange={this.handleTextChange}
-              value={this.state.username}
-              name="username"
-              label="Username"
-              type="text"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            type="text"
+            id="userName"
+            label="Username"
+            name="userName"
+            // onChange={handleUsernameChange}
+            autoComplete="userName"
+            autoFocus
+            style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             />
             <TextField
-              required
-              onChange={this.handleTextChange}
-              value={this.state.password}
-              name="password"
-              label="Password"
-              type="password"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            // onChange={handlePasswordChange}
+            autoComplete="current-password"
+            style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             />
             <Button
-              type="submit"
-              className="login-button"
+              // type="submit"
+              className="signUp-button"
               variant="contained"
               color="grey"
             >
               Sign Up!
             </Button>
+            <Link to="/login" style={{color:"white", paddingTop: "20px"}}>
+                Back to login!
+            </Link>
           </form>
         </Container>
       </div>
