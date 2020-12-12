@@ -89,7 +89,7 @@ render() {
                 sign up
             </Button>
             </Link>
-            <Link to="/login" style={{color:"white", paddingTop: "20px"}}>
+            <Link to="/login" class="signup" style={{color:"white", paddingTop: "20px"}}>
                 Back to login!
             </Link>
           </form>

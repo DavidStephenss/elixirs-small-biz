@@ -125,6 +125,7 @@ body {
   flex-direction: column;
   text-align: left;
   font-family: 'JetBrains Mono', monospace;
+  opacity: 2;
 }
 /* .MuiContainer-root {
   padding-top: 115px;
@@ -142,5 +143,12 @@ body {
 h1 {
   font-family: 'JetBrains Mono', monospace;
  font-size: xx-small;
+}
+
+.description {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+ text-align: center;
 }
 

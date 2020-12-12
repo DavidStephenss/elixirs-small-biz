@@ -20,6 +20,9 @@ export default function Navigation(props) {
             <Button color="inherit" className="nav-list-item">
               <Link to="/home">Cocktails</Link>
             </Button>
+             <Button color="inherit" className="nav-list-item">
+              <Link to="/about">Info</Link>
+            </Button>
             <li>
               {document.cookie === "loggedIn=true" && (
                 <div>
