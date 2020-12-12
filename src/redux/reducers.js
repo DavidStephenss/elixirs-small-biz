@@ -24,6 +24,10 @@ const loggedIn = (state = [], action) => {
 
 const user = (state = "", action) => {
   switch (action.type) {
+    case "LOGIN":
+      return action.value;
+    case "LOGOUT":
+      return action.value;
     case "SET_USER":
       return action.value;
     default:

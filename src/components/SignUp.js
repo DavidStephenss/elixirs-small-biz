@@ -28,6 +28,12 @@ class SignUp extends Component {
     } else {
     }
   };
+  // login = (e) => {
+  //   e.preventDefault();
+  //   document.cookie = "loggedIn=true;max-age=60*1000";
+  //   this.props.setUser(this.state.username);
+  //   this.setState({ redirectHome: true });
+  // };
 render() {
   if (this.state.redirectHome) {
       return <Redirect to="/home" />;
@@ -75,14 +81,14 @@ render() {
             autoComplete="current-password"
             style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             /> */}
+            <Link to="/home">
             <Button
-              // type="submit"
-              className="signUp-button"
-              variant="contained"
-              color="grey"
-            >
-              Sign Up!
+              type="submit"
+              className="login-button"
+              variant="contained">
+                sign up
             </Button>
+            </Link>
             <Link to="/login" style={{color:"white", paddingTop: "20px"}}>
                 Back to login!
             </Link>
