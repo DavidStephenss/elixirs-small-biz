@@ -11,6 +11,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import cookie from "cookie";
 
+
 const Home = (props) => {
   const cookies = cookie.parse(document.cookie);
 
@@ -20,7 +21,7 @@ const Home = (props) => {
         <TableCell>
           <DeleteIcon
             onClick={() => props.removeBusiness(id)}
-            style={{ color: "Orange" }}
+            style={{ color: "red" }}
           />
         </TableCell>
       );
@@ -32,19 +33,19 @@ const Home = (props) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className="table-cell">Name</TableCell>
-             <TableCell>ingredients</TableCell>
-            <TableCell>Description</TableCell>
+            <TableCell className="table-cell" style={{ color: "white "}}>Name</TableCell>
+             <TableCell style={{ color: "white ", opacity:"1"}}>ingredients</TableCell>
+            <TableCell style={{ color: "white ", opacity:"1"}}>Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {props.businesses.map((business, id) => (
             <TableRow>
-              <TableCell style={{ color: "mediumblue" }}>
+              <TableCell style={{ color: "green" }}>
                 <Link to={`/business/${business.id}`}>{business.name}</Link>
               </TableCell>
-              <TableCell>{business.ingredients}</TableCell>
-              <TableCell>{business.description}</TableCell>
+              <TableCell style={{ color: "white ", opacity:"1"}}>{business.ingredients}</TableCell>
+              <TableCell style={{ color: "white ", opacity:"1"}}>{business.description}</TableCell>
               {deleteButton(id)}
             </TableRow>
           ))}
@@ -55,3 +56,9 @@ const Home = (props) => {
 };
 
 export default Home;
+
+// import CocktailCard from "./Card";
+
+ // <div>
+    //   <CocktailCard/>
+    // </div>

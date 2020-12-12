@@ -6,11 +6,8 @@ import { Redirect } from "react-router-dom";
 const AddBusiness = (props) => {
   const [business, setBusiness] = useState({
     name: "",
-    address: "",
-    hours: "",
+    ingredients: "",
     description: "",
-    lat: 0,
-    lng: 0,
     redirect: false,
   });
 
@@ -38,22 +35,25 @@ const AddBusiness = (props) => {
           placeholder={"Name"}
           fullWidth={true}
           id="name"
+          style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
         />
         <TextField
           onChange={handleTextChange}
           placeholder={"ingredients"}
           fullWidth={true}
-          id="hours"
+          id="ingredients"
+          style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
         />
         <TextField
           onChange={handleTextChange}
           placeholder={"Description"}
           fullWidth={true}
           id="description"
+          style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
         />
         <Button
           variant="contained"
-          color="secondary"
+          color="green"
           type="submit"
           size="small"
           style={{
@@ -67,7 +67,7 @@ const AddBusiness = (props) => {
         >
           Save
         </Button>
-        {business.redirect && <Redirect to="/" />}
+        {business.redirect && <Redirect to="/home" />}
       </form>
     </Container>
   );

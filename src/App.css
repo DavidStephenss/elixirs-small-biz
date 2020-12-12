@@ -7,34 +7,42 @@
   flex-direction: column;
   margin: 50px auto;
   width: 50%;
+ font-family: 'JetBrains Mono', monospace;
+  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 .login-button {
-  margin-top: 25px !important;
+  margin-top: 25px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .card {
   width: 20vw;
   margin: 25px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 ul {
   padding-inline-start: 20px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .text-gray {
   color: gray;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .nav-list {
@@ -43,10 +51,12 @@ ul {
   flex-direction: row;
   justify-content: flex-end;
   margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .nav-list-item {
   margin: auto 20px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .nav-list-item:hover {
@@ -54,26 +64,95 @@ ul {
 }
 
 .nav-title {
-  text-align: left;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  padding-left: 30px;
 }
 
 .biz-paper {
   margin-top: 50px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 p {
   font-size: 12pt;
+  color: aliceblue;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .nav-bar {
   background-color: #000501;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .business-card {
   margin-bottom: 80pt;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 h5 {
   margin-block-start: 0em;
   margin-block-end: 0em;
+  color: aliceblue;
+  font-family: 'JetBrains Mono', monospace;
 }
+
+h2 {
+  color: rgb(25, 236, 18);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1570869937455-a347fba0a41b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+#tablecell{
+ font-size: large;
+ font-family: 'JetBrains Mono', monospace;
+}
+
+.sign-up-auth-wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  opacity: 2;
+}
+/* .MuiContainer-root {
+  padding-top: 115px;
+} */
+
+/* .MuiToolbar-regular{
+  min-height: 
+} */
+
+.MuiButton-label {
+ font-family: 'JetBrains Mono', monospace;
+ font-size: large;
+}
+
+h1 {
+  font-family: 'JetBrains Mono', monospace;
+ font-size: xx-small;
+}
+
+.description {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+ text-align: center;
+ color: rgb(34, 18, 18);
+ opacity: 1;
+ background-color: rgb(240, 254, 255);
+}
+

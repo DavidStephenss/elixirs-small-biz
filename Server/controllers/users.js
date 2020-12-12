@@ -3,14 +3,14 @@ const pool = require('../sql/connection')
 const { handleSQLError } = require('../sql/error')
 
 const getAllUsers = (req, res) => {
-  pool.query("SELECT + FROM users", (err, rows) => {
+  pool.query("SELECT * FROM users", (err, rows) => {
     if (err) return handleSQLError(res, err)
     return res.json(rows)
   })
 }
 
 const getUserById = (req, res) => {
-  let sql = "SELECT + FROM users WHERE id = ?"
+  let sql = "SELECT * FROM users WHERE id = ?"
   sql = mysql.format(sql, [ req.params.id ])
 
    pool.query(sql, (err, rows) => {
@@ -20,9 +20,9 @@ const getUserById = (req, res) => {
 }
 
 const createUser = (req, res) => {
-  const { userName, password } = req.body
-  let sql = "INSERT INTO users (userName, password) VALUES (?, ?)"
-  sql = mysql.format(sql, [ userName, password ])
+  const { userName, userPassword } = req.body
+  let sql = "INSERT INTO users (userName, userPassword) VALUES (?, ?)"
+  sql = mysql.format(sql, [ userName, userPassword ])
 
   pool.query(sql, (err, results) => {
     if (err) return handleSQLError(res, err)
