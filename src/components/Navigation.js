@@ -59,7 +59,7 @@ export default function Navigation(props) {
       <Typography color="text-primary">
         {cookies.loggedIn && (
           <span>
-            Welcome <span style={{ color: "hotpink" }}>{props.user}</span>!
+            Welcome <span style={{ color: "hotpink", paddingLeft: "20px" }}>{props.user}</span>!
           </span>
         )}
       </Typography>

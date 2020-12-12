@@ -66,7 +66,7 @@ class App extends Component {
                 Login 
             </Button>
             <br/>
-              <Link to="/sign-up" style={{color:"white"}}>
+              <Link to="/sign-up" style={{color:"white", fontSize:"large"}}>
                 Don't have an account? Signup!
               </Link>
           </form>

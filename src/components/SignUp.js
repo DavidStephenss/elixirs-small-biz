@@ -7,6 +7,7 @@ class SignUp extends Component {
   state = {
     userName: "",
     password: "",
+    redirectHome: false,
   };
   handleTextChange = (e) => {
     const state = { ...this.state };
@@ -20,7 +21,7 @@ class SignUp extends Component {
       userName: this.state.userName,
       userPassword: this.state.password,
     };
-    console.log(userObject + "this is the user object");
+    console.log(userObject + "user object");
     e.preventDefault();
     this.props.setUser(userObject);
     if (this.props.user.userName !== "") {
@@ -29,7 +30,7 @@ class SignUp extends Component {
   };
 render() {
   if (this.state.redirectHome) {
-      return <Redirect to="/" />;
+      return <Redirect to="/home" />;
     }
     return (
       <div className="app">
