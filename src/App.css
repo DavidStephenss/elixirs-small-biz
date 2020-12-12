@@ -102,7 +102,7 @@ h2 {
 }
 
 #root {
-  background-image: url("https://images.unsplash.com/photo-1574579804640-a15fecaeda35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("https://images.unsplash.com/photo-1574449126805-6f11acf5a8c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   height: 100vh;
   font-family: 'Marck Script', cursive;
 }
@@ -124,4 +124,18 @@ h2 {
 /* .MuiContainer-root {
   padding-top: 115px;
 } */
+
+/* .MuiToolbar-regular{
+  min-height: 
+} */
+
+.MuiButton-label {
+ font-family: 'Marck Script', cursive;
+ font-size: large;
+}
+
+h1 {
+  font-family: 'Marck Script', cursive;
+ font-size: xx-small;
+}
 

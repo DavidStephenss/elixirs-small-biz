@@ -6,7 +6,7 @@ import { TextField, Button, Container } from "@material-ui/core";
 class SignUp extends Component {
   state = {
     userName: "",
-    password: "",
+    userPassword: "",
     redirectHome: false,
   };
   handleTextChange = (e) => {
@@ -19,7 +19,7 @@ class SignUp extends Component {
     console.log("is create account running?");
     const userObject = {
       userName: this.state.userName,
-      userPassword: this.state.password,
+      userPassword: this.state.userPassword,
     };
     console.log(userObject + "user object");
     e.preventDefault();
@@ -35,7 +35,7 @@ render() {
     return (
       <div className="app">
         <Container maxWidth="sm">
-          <form className="login-form" onSubmit={this.login}>
+          <form className="login-form" onSubmit={this.createAccount}>
             <TextField
             variant="outlined"
             margin="normal"
@@ -45,24 +45,36 @@ render() {
             id="userName"
             label="Username"
             name="userName"
-            // onChange={handleUsernameChange}
+            onChange={this.handleTextChange}
+            value={this.state.userName}
             autoComplete="userName"
             autoFocus
             style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
             />
             <TextField
+                required
+                onChange={this.handleTextChange}
+                value={this.state.userPassword}
+                type="password"
+                className="form-control"
+                name="userPassword"
+                label="Password"
+                style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
+              />
+            {/* <TextField
             variant="outlined"
             margin="normal"
             required
+            onChange={this.handleTextChange}
+            value={this.state.userPassword}
             fullWidth
             name="password"
             label="Password"
             type="password"
             id="password"
-            // onChange={handlePasswordChange}
             autoComplete="current-password"
             style={{backgroundColor: "rgba(255, 255, 255, 0.6)"}}
-            />
+            /> */}
             <Button
               // type="submit"
               className="signUp-button"
