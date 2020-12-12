@@ -13,9 +13,9 @@ const About = () =>{
         <br/>
          It was my love for cocktails and my new found love for programming that drew me to make this app. This app will have the ability to let you pick and choose your favorite cocktails and create some of your own. 
          <br/>
-         Thanks for visiting! I hope you enjoy! 
+         
       </p>
-      <h2 class="name"> -David Stephens </h2>
+      <h2 class="name" style={{paddingLeft: "50px"}}> Thanks for visiting! I hope you enjoy!  </h2>
     </div>
   )
 }

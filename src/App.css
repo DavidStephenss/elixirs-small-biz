@@ -64,8 +64,9 @@ ul {
 }
 
 .nav-title {
-  text-align: left;
+  text-align: center;
   font-family: 'JetBrains Mono', monospace;
+  padding-left: 30px;
 }
 
 .biz-paper {
@@ -150,5 +151,8 @@ h1 {
   padding-left: 50px;
   padding-right: 50px;
  text-align: center;
+ color: rgb(34, 18, 18);
+ opacity: 1;
+ background-color: rgb(240, 254, 255);
 }
 

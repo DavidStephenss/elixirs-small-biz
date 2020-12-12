@@ -14,7 +14,7 @@ export default function Navigation(props) {
       <AppBar position="relative">
         <Toolbar className="nav-bar">
           <h1 variant="h1" className="nav-title" class="animate__animated animate__bounce" style={{fontSize:"large"}}>
-             Elixirs!
+             Welcome To Elixirs!
           </h1>
           <ul className="nav-list">
             <Button color="inherit" className="nav-list-item">

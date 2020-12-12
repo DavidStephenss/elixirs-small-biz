@@ -53,7 +53,7 @@ const AddBusiness = (props) => {
         />
         <Button
           variant="contained"
-          color="secondary"
+          color="green"
           type="submit"
           size="small"
           style={{

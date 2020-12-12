@@ -34,8 +34,8 @@ const Home = (props) => {
         <TableHead>
           <TableRow>
             <TableCell className="table-cell" style={{ color: "white "}}>Name</TableCell>
-             <TableCell style={{ color: "white "}}>ingredients</TableCell>
-            <TableCell style={{ color: "white "}}>Description</TableCell>
+             <TableCell style={{ color: "white ", opacity:"1"}}>ingredients</TableCell>
+            <TableCell style={{ color: "white ", opacity:"1"}}>Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -44,8 +44,8 @@ const Home = (props) => {
               <TableCell style={{ color: "green" }}>
                 <Link to={`/business/${business.id}`}>{business.name}</Link>
               </TableCell>
-              <TableCell style={{ color: "white "}}>{business.ingredients}</TableCell>
-              <TableCell style={{ color: "white "}}>{business.description}</TableCell>
+              <TableCell style={{ color: "white ", opacity:"1"}}>{business.ingredients}</TableCell>
+              <TableCell style={{ color: "white ", opacity:"1"}}>{business.description}</TableCell>
               {deleteButton(id)}
             </TableRow>
           ))}
